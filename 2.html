@@ -16,40 +16,42 @@
       </ol>
       <div id="buttons">
         <input type="button" value="night" class="button" onclick="
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
+        var target=document.querySelector('body').style;
+        target.backgroundColor='black';
+        target.color='white';
         var select = document.querySelectorAll('a');
         for (i=0;i<select.length; i++) {
            select[i].style.color='white';
          }
         ">
         <input type="button" value="day" class="button" onclick="
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
+        var target=document.querySelector('body').style;
+        target.backgroundColor='white';
+        target.color='black';
         var select = document.querySelectorAll('a');
         for (i=0;i<select.length; i++) {
            select[i].style.color='black';
          }
         ">
          <input type="button" id="toggle" value="toNight" class="button" width="50px" onclick="
+         var target=document.querySelector('body').style;
          if (value === 'toNight'){
-            document.querySelector('body').style.backgroundColor='black';
-            document.querySelector('body').style.color='white';
+            target.backgroundColor='black';
+            target.color='white';
             var select = document.querySelectorAll('a');
             for (i=0;i<select.length; i++) {
                select[i].style.color='white';
             }
             this.value = 'toDay';
          }else{
-           document.querySelector('body').style.backgroundColor='white';
-           document.querySelector('body').style.color='black';
+           target.backgroundColor='white';
+           target.color='black';
            var select = document.querySelectorAll('a');
            for (i=0;i<select.length; i++) {
               select[i].style.color='black';
             }
             this.value = 'toNight';
-        }
-        ">
+        }">
         </div>
     </div>
     <div id="content">
@@ -66,6 +68,7 @@
         <br>웹 페이지의 스타일(작성형식)을 미리 저장해 두면 웹 페이지의 한 가지 요소만 변경해도 관련되는 전체 페이지의 내용이 한꺼번에 변경되므로, 문서 전체의 일관성을 유지할 수 있고 작업 시간도 단축된다.
         <br>따라서 웹 개발자들은 보다 풍부한 디자인으로 웹을 설계할 수 있고, 글자의 크기, 글자체, 줄간격, 배경 색상, 배열위치 등을 자유롭게 선택하거나 변경할 수 있으며 유지·보수도 간편하게 할 수 있다.
         <br>[네이버 지식백과] CSS [cascading style sheets] (두산백과)</p>
+      </div>
     </div>
   </div>
 </body>

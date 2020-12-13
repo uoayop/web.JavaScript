@@ -16,40 +16,42 @@
         </ol>
         <div id="buttons">
           <input type="button" value="night" class="button" onclick="
-          document.querySelector('body').style.backgroundColor='black';
-          document.querySelector('body').style.color='white';
+          var target=document.querySelector('body').style;
+          target.backgroundColor='black';
+          target.color='white';
           var select = document.querySelectorAll('a');
           for (i=0;i<select.length; i++) {
              select[i].style.color='white';
            }
           ">
           <input type="button" value="day" class="button" onclick="
-          document.querySelector('body').style.backgroundColor='white';
-          document.querySelector('body').style.color='black';
+          var target=document.querySelector('body').style;
+          target.backgroundColor='white';
+          target.color='black';
           var select = document.querySelectorAll('a');
           for (i=0;i<select.length; i++) {
              select[i].style.color='black';
            }
           ">
            <input type="button" id="toggle" value="toNight" class="button" width="50px" onclick="
+           var target=document.querySelector('body').style;
            if (value === 'toNight'){
-              document.querySelector('body').style.backgroundColor='black';
-              document.querySelector('body').style.color='white';
+              target.backgroundColor='black';
+              target.color='white';
               var select = document.querySelectorAll('a');
               for (i=0;i<select.length; i++) {
                  select[i].style.color='white';
               }
               this.value = 'toDay';
            }else{
-             document.querySelector('body').style.backgroundColor='white';
-             document.querySelector('body').style.color='black';
+             target.backgroundColor='white';
+             target.color='black';
              var select = document.querySelectorAll('a');
              for (i=0;i<select.length; i++) {
                 select[i].style.color='black';
               }
               this.value = 'toNight';
-          }
-          ">
+          }">
           </div>
       </div>
       <div id="content">
