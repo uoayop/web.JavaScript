@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WEB1 - index</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="JavaScript_style.css">
+  </head>
+  <body>
+    <h1><a href="index.html">uoayop의 블로그</a></h1>
+    <div id="grid">
+      <div id="category">
+        <ol>
+          <li><a href="1.html">HTML</a></li>
+          <li><a href="2.html">CSS</a></li>
+          <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        var select = document.querySelectorAll('a');
+        for (i=0;i<select.length; i++) {
+           select[i].style.color='white';
+         }
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        var select = document.querySelectorAll('a');
+        for (i=0;i<select.length; i++) {
+           select[i].style.color='black';
+         }
+        ">
+      </div>
+      <div id="content">
+        <h2>소개</h2>
+        <p>안녕하세요. uoayop입니다.
+        <br>저희 블로그 <u>정상 영업</u>합니다. 종종 놀러오세요.
+        <br>아직 조금 <strong>부족한 블로그</strong>지만 언젠가 <strong>멋진 코드</strong>로 가득 찬 블로그가 될거랍니다.
+        <br>감사합니다. :)</p>
+      </div>
+    </div>
+  </body>
+</html>

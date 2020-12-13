@@ -1,0 +1,55 @@
+body{
+margin: 0;
+}
+#youtube{
+  display: inline;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+h1{
+  font-size: 45px; text-align: center;
+  border-bottom:1px solid gray;
+  margin: 0;
+  padding: 30px;
+}
+ol{
+  width: 100px;
+  padding: 20px;
+  margin: 0;
+}
+#grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid #content{
+  border-left: 1px solid gray;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#grid #category{
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+/* width가 900픽셀보다 작으면 */
+@media(max-width:900px){
+  #grid{
+    display: block;
+  }
+  #grid ol{
+    width: inherit;
+    border-right: none;
+    padding: 20px;
+  }
+  #grid #content{
+    padding-left: 25px;
+    border-top: 1px solid gray;
+  }
+  #youtube iframe{
+    display: none;
+  }
+}
