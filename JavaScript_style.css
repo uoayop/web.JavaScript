@@ -6,7 +6,7 @@ margin: 0;
   padding: 20px;
 }
 a{
-  text-decoration: none;
+  text-decoration-color: #888888;
   color: black;
 }
 
@@ -21,9 +21,11 @@ ol{
   padding: 20px;
   margin: 0;
 }
+
+
 #grid{
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 180px 1fr;
 }
 #grid #content{
   border-left: 1px solid gray;
@@ -35,8 +37,16 @@ ol{
   padding-bottom: 20px;
 }
 
+#buttons{
+  line-height: 30px;
+}
+
+.button{
+  vertical-align: middle;
+}
+
 /* width가 900픽셀보다 작으면 */
-@media(max-width:900px){
+@media(max-width:973px){
   #grid{
     display: block;
   }
@@ -49,6 +59,15 @@ ol{
     padding-left: 25px;
     border-top: 1px solid gray;
   }
+  #youtube iframe{
+    width: auto;
+  }
+  #buttons{
+    line-height:normal;
+  }
+}
+
+@media(max-width:696px){
   #youtube iframe{
     display: none;
   }
