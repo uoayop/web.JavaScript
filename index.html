@@ -22,24 +22,37 @@
          }
       }
 
+      var Color = {
+          setBackground : function (tg,color){
+              tg.backgroundColor=color;
+          },
+
+          setFont : function (tg,color){
+              tg.color=color;
+          },
+
+          setLink : function (tg,color){
+            for (i=0;i<tg.length; i++) {
+                tg[i].style.color= color;
+             }
+          }
+
+      }
+
       function toBlack(){
         var target=document.querySelector('body').style;
-        target.backgroundColor='black';
-        target.color='white';
         var select = document.querySelectorAll('a');
-        for (i=0;i<select.length; i++) {
-           select[i].style.color='white';
-         }
+        Color.setBackground(target,'black');
+        Color.setFont(target,'white');
+        Color.setLink(select,'white');
       }
 
       function toWhite(){
         var target=document.querySelector('body').style;
-        target.backgroundColor='white';
-        target.color='black';
         var select = document.querySelectorAll('a');
-        for (i=0;i<select.length; i++) {
-           select[i].style.color='black';
-         }
+        Color.setBackground(target,'white');
+        Color.setFont(target,'black');
+        Color.setLink(select,'black');
       }
     </script>
   </head>
