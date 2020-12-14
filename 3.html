@@ -4,6 +4,44 @@
     <title>WEB2 - JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="JavaScript_style.css">
+    <script>
+      function DayNightHandler(self){
+         if (self.value === 'night'){
+            toBlack();
+           }
+         else if (self.value === 'day') {
+            toWhite();
+         }
+         else if (self.value === 'toNight'){
+            toBlack();
+            self.value = 'toDay';
+          }
+         else if (self.value === 'toDay'){
+            toWhite();
+            self.value = 'toNight';
+         }
+      }
+
+      function toBlack(){
+        var target=document.querySelector('body').style;
+        target.backgroundColor='black';
+        target.color='white';
+        var select = document.querySelectorAll('a');
+        for (i=0;i<select.length; i++) {
+           select[i].style.color='white';
+         }
+      }
+
+      function toWhite(){
+        var target=document.querySelector('body').style;
+        target.backgroundColor='white';
+        target.color='black';
+        var select = document.querySelectorAll('a');
+        for (i=0;i<select.length; i++) {
+           select[i].style.color='black';
+         }
+      }
+    </script>
   </head>
   <body>
     <h1><a href="index.html">uoayop의 블로그</a></h1>
@@ -16,42 +54,14 @@
         </ol>
         <div id="buttons">
           <input type="button" value="night" class="button" onclick="
-          var target=document.querySelector('body').style;
-          target.backgroundColor='black';
-          target.color='white';
-          var select = document.querySelectorAll('a');
-          for (i=0;i<select.length; i++) {
-             select[i].style.color='white';
-           }
+              DayNightHandler(this);
           ">
           <input type="button" value="day" class="button" onclick="
-          var target=document.querySelector('body').style;
-          target.backgroundColor='white';
-          target.color='black';
-          var select = document.querySelectorAll('a');
-          for (i=0;i<select.length; i++) {
-             select[i].style.color='black';
-           }
+              DayNightHandler(this);
           ">
            <input type="button" id="toggle" value="toNight" class="button" width="50px" onclick="
-           var target=document.querySelector('body').style;
-           if (value === 'toNight'){
-              target.backgroundColor='black';
-              target.color='white';
-              var select = document.querySelectorAll('a');
-              for (i=0;i<select.length; i++) {
-                 select[i].style.color='white';
-              }
-              this.value = 'toDay';
-           }else{
-             target.backgroundColor='white';
-             target.color='black';
-             var select = document.querySelectorAll('a');
-             for (i=0;i<select.length; i++) {
-                select[i].style.color='black';
-              }
-              this.value = 'toNight';
-          }">
+              DayNightHandler(this);
+           ">
           </div>
       </div>
       <div id="content">
